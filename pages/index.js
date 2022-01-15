@@ -12,10 +12,13 @@ export async function getStaticProps() {
   }
 }
 
-//↓ Instead of the file system, fetch post data from an external API endpoint
-//export async function getSortedPostsData() {
-  //const res = await fetch('..')
-  //return res.json()
+//↓サーバーサイドレンダリングするときはgetServerSidePropsを使用する
+//export async function getServerSideProps(context) {
+  //return {
+    //props: {
+      // props for your component
+    //}
+  //}
 //}
 
 export default function Home({ allPostsData }) {
